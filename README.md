@@ -11,3 +11,9 @@ create cache entry and ask if it is expired
 ```
 docker run --rm --cap-add=SYS_TIME --volume is_expired:/tmp elnebuloso/is-expired foo 2
 ```
+
+```
+if [[ "$(docker run --cap-add=SYS_TIME --volume is_expired:/tmp elnebuloso/is-expired foo 1)" = "yes" ]]; then
+    echo "do something when older"
+fi;
+```
