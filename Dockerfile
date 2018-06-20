@@ -1,9 +1,8 @@
-FROM alpine
+FROM php:7.2-cli-alpine
 MAINTAINER jeff.tunessen@gmail.com
 
-COPY docker/bin/is-expired.sh /usr/local/bin
+COPY docker/bin/console /usr/local/bin
+RUN chmod +x /usr/local/bin/console
 
-RUN chmod +x /usr/local/bin/is-expired.sh
-
-ENTRYPOINT ["is-expired.sh"]
+ENTRYPOINT ["console"]
 CMD []

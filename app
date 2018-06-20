@@ -14,7 +14,7 @@ case "$1" in
     ;;
 
     run)
-        docker run $tty --interactive --rm --cap-add=SYS_TIME --volume is_expired:/tmp $tag ${@:2}
+        docker run $tty --interactive --rm --volume is_expired:/tmp $tag ${@:2}
     ;;
 
     *)

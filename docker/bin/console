@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+$name = $argv[1];
+$value = $argv[2];
+$period = $argv[3];
+
+try {
+    $file = '/tmp/' . md5($name);
+
+    if (!file_exists($file)) {
+        file_put_contents($file, date('Y-m-d H:i:s'));
+    }
+
+    $date1 = new DateTime();
+    $date2 = new DateTime("+$value $period");
+
+    $fileTime = filemtime($file);
+
+    $diff1 = $date2->getTimestamp() - $date1->getTimestamp();
+    $diff2 = $date1->getTimestamp() - $fileTime;
+
+    if ($diff2 > $diff1) {
+        echo "yes" . PHP_EOL;
+        unlink($file);
+        exit(0);
+    }
+
+    echo "no" . PHP_EOL;
+    exit(0);
+} catch (Exception $e) {
+    exit(1);
+}
