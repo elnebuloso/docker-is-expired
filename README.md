@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.com/elnebuloso/docker-is-expired.svg?branch=master)](https://travis-ci.com/elnebuloso/docker-is-expired)
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/is-expired.svg)](https://hub.docker.com/r/elnebuloso/is-expired)
-[![Docker Automated build](https://img.shields.io/docker/automated/elnebuloso/is-expired.svg)](https://hub.docker.com/r/elnebuloso/is-expired)
 [![GitHub](https://img.shields.io/github/license/elnebuloso/docker-ansible.svg)](https://github.com/elnebuloso/docker-is-expired)
 
 Dockerized Cache Entry and Tracking
