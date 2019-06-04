@@ -1,8 +1,13 @@
 # docker-is-expired
 
-create cache entry and ask if it is expired
+[![Build Status](https://travis-ci.com/elnebuloso/docker-is-expired.svg?branch=master)](https://travis-ci.com/elnebuloso/docker-is-expired)
+[![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/is-expired.svg)](https://hub.docker.com/r/elnebuloso/is-expired)
+[![Docker Automated build](https://img.shields.io/docker/automated/elnebuloso/is-expired.svg)](https://hub.docker.com/r/elnebuloso/is-expired)
+[![GitHub](https://img.shields.io/github/license/elnebuloso/docker-ansible.svg)](https://github.com/elnebuloso/docker-is-expired)
 
-## example
+Dockerized Cache Entry and Tracking
+
+## usage
 
 - ask if entry with name foo is younger or older than 10 seconds
 - will return yes if cache entry foo is older than given params
@@ -28,6 +33,6 @@ docker run --rm --volume is_expired:/tmp elnebuloso/is-expired foo 1 hour
 
 ```
 if [[ "$(docker run --volume is_expired:/tmp elnebuloso/is-expired foo 10 seconds)" = "yes" ]]; then
-    echo "do something when older"
+    echo "do something when foo is expired"
 fi;
 ```
