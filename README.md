@@ -4,7 +4,7 @@
 
 ![Release](https://github.com/elnebuloso/docker-is-expired/workflows/Release/badge.svg)
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/is-expired.svg)](https://hub.docker.com/r/elnebuloso/is-expired)
-[![GitHub](https://img.shields.io/github/license/elnebuloso/docker-ansible.svg)](https://github.com/elnebuloso/docker-is-expired)
+[![GitHub](https://img.shields.io/github/license/elnebuloso/docker-is-expired.svg)](https://github.com/elnebuloso/docker-is-expired)
 
 Dockerized Cache Entry and Tracking
 
